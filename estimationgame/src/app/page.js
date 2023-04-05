@@ -1,10 +1,47 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import styles from './page.module.css'
+import React, {useState} from 'react'
 
-const inter = Inter({ subsets: ['latin'] })
+//round, score, timer, started
 
 export default function Home() {
+  const [round, setRound] = useState(0);
+  const [score, setScore] = useState(0);
+  const [timer, setTimer] = useState(0);
+  const [gameOn, setGameOn] = useState(false);
+  const [finalScreen, setFinalScreen] = useState(false);
+
+  //3 total screens. 
+  //Start game screen with instructions
+  //GameOn screen with questions
+  //FinalScreen screen with total score
+
+  function start() {
+    setRound(1);
+    setTimer(10);
+    startTimer(10);
+    // reset score
+    // set questions
+    //gameOn = true
+  }
+  function startTimer(seconds, round) {
+    //start timer. 
+    //when reaches 0, if same round, activate nextRound
+  }
+
+  function nextRound() {
+    // when timer reaches 0 or an option is chosen, this kicks off
+    // add new score to total
+    // reset questions
+    // reset timer
+    // if final round, kick to finalScore
+  }
+
+  function finalScore() {
+    //FinalScreen = true
+    //gameOn = false
+  }
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
