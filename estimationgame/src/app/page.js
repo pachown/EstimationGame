@@ -8,7 +8,26 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <p>
+        <p className={styles.title}>Estimation Game</p>
+        <div className={styles.gameBoard}>
+          <div className={styles.topbar}>
+            <div>Time</div>
+            <div>Round</div>
+            <div>Score</div>
+          </div>
+          <div>
+            <div className={styles.questionsContainer}>
+              <div className={styles.question}>5+5</div>
+              <div className={styles.question}>6*3</div>
+              <div className={styles.question}>50/3</div>
+              <div className={styles.question}>24*0.8</div>
+              <div className={styles.question}>5*5</div>
+              <div className={styles.question}>12+40</div>
+              <div className={styles.question}>100/3</div>
+            </div>
+          </div>
+        </div>
+        {/* <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.js</code>
         </p>
@@ -84,7 +103,7 @@ export default function Home() {
           <p className={inter.className}>
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
-        </a>
+        </a> */}
       </div>
     </main>
   )
