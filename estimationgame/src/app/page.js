@@ -11,9 +11,18 @@ export default function Home() {
         <p className={styles.title}>Estimation Game</p>
         <div className={styles.gameBoard}>
           <div className={styles.topbar}>
-            <div>Time</div>
-            <div>Round</div>
-            <div>Score</div>
+            <div className={styles.timeContainer}>
+              <div className={styles.topbarTitle}>Time</div>
+              <div className={styles.topbarInfo}>0:08</div>
+            </div>
+            <div className={styles.roundContainer}>
+              <div className={styles.topbarTitle}>Round</div>
+              <div className={styles.topbarInfo}>5/10</div>
+            </div>
+            <div className={styles.scoreContainer}>
+              <div className={styles.topbarTitle}>Score</div>
+              <div className={styles.topbarInfo}>448/482</div>
+            </div>
           </div>
           <div>
             <div className={styles.questionsContainer}>

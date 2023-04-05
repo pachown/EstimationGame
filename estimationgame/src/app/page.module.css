@@ -22,3 +22,39 @@
   height: 700px;
   border: 1px solid black;
 }
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  justify-content: center;
+  border: 1px solid blue;
+}
+
+.timeContainer {
+  width: 33%;
+  text-align: center;
+  border: 1px solid blue;
+}
+.roundContainer {
+  width: 34%;
+  text-align: center;
+  border: 1px solid blue;
+
+}
+.scoreContainer {
+  width: 33%;
+  text-align: center;
+  border: 1px solid blue;
+
+}
+
+.topbarTitle {
+  height: 30%;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.topbarInfo {
+  font-size: 1.5em;
+}
