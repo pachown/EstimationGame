@@ -6,23 +6,20 @@
   padding: 6rem;
   min-height: 100vh;
 }
-
 .title {
   position: absolute;
   top: 5%;
   left: 40%;
 
 }
-
 .gameBoard {
   position: absolute;
   top: 10%;
   left: 30%;
   width: 500px;
-  height: 700px;
+  height: 640px;
   border: 1px solid black;
 }
-
 .topbar {
   display: flex;
   flex-direction: row;
@@ -30,7 +27,6 @@
   justify-content: center;
   border: 1px solid blue;
 }
-
 .timeContainer {
   width: 33%;
   text-align: center;
@@ -40,21 +36,36 @@
   width: 34%;
   text-align: center;
   border: 1px solid blue;
-
 }
 .scoreContainer {
   width: 33%;
   text-align: center;
   border: 1px solid blue;
-
 }
-
 .topbarTitle {
   height: 30%;
   font-size: 1.2em;
   margin-bottom: 10px;
 }
-
 .topbarInfo {
   font-size: 1.5em;
+}
+.questionsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.question {
+  text-align: center;
+  height: 80px;
+  width: 100%;
+  border: 1px solid green;
+  font-size: 2rem;
+  line-height: 80px;
+  background-color:rgb(205, 231, 165);
+}
+.question:hover,
+.question:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
 }
