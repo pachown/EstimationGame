@@ -7,3 +7,4 @@ const numbers = {
     6:["5+1*1", "80/6-2", "12/2", "72/2/6", "45/9+1", "2*3*1"],
 }
 module.exports = numbers;
+

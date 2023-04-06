@@ -73,7 +73,7 @@ export default function Home() {
         </div>
         <div>
           <div className={styles.questionsContainer}>
-            <div className={styles.question}>5+5</div>
+            <div className={styles.question}>5+6</div>
             <div className={styles.question}>6*3</div>
             <div className={styles.question}>50/3</div>
             <div className={styles.question}>24*0.8</div>
@@ -81,6 +81,7 @@ export default function Home() {
             <div className={styles.question}>12+40</div>
             <div className={styles.question}>100/3</div>
           </div>
+          <div></div>
         </div>
       </div>
       <div className={styles.scoreScreen}>
