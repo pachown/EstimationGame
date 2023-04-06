@@ -1,5 +1,4 @@
 "use client"
-import Image from 'next/image'
 import styles from './page.module.css'
 import React, {useState} from 'react'
 
@@ -9,13 +8,14 @@ export default function Home() {
   const [round, setRound] = useState(0);
   const [score, setScore] = useState(0);
   const [timer, setTimer] = useState(0);
-  const [gameOn, setGameOn] = useState(false);
+  const [startScreen, setstartScreen] = useState(false);
   const [scoreScreen, setScoreScreen] = useState(false);
 
   //3 total screens. 
   //Start game screen with instructions
   //GameOn screen with questions
   //FinalScreen screen with total score
+  console.log("round: ", round, " score: ", score, " timer: ", timer, " startScreen: ", startScreen, " scoreScreen: ", scoreScreen)
 
   function start() {
     setRound(1);
@@ -43,35 +43,43 @@ export default function Home() {
     //gameOn = false
   }
 
+
   return (
     <main className={styles.main}>
       <p className={styles.title}>Estimation Game</p>
-      {/* <div className={styles.startScreen}>
-        <h1>Welcome to estimation game</h1>
-        <ul className={styles.rulesContainer}>
-          <li className={styles.rules}>The goal of the game is to get as high of a score as possible.</li> 
-          <li className={styles.rules}>You will have 5 seconds to guess which answer results in the highest number</li>
-          <li className={styles.rules}>At the end of 10 rounds you will see your score vs the maximum possible score you could have gotten</li>
-          <li className={styles.rules}>Good luck!</li>
-        </ul>
-        <button className={styles.startbtn}>Start</button>
-      </div> */}
-      <div className={styles.gameBoard}>
-        <div className={styles.topbar}>
-          <div className={styles.timeContainer}>
-            <div className={styles.topbarTitle}>Time</div>
-            <div className={styles.topbarInfo}>0:08</div>
+
+      {{startScreen}.startScreen &&
+        <div className={styles.startScreen}>
+          <h1>Welcome to estimation game </h1>
+          <div className={styles.rulesContainer}>
+            <div className={styles.rules}>The goal of the game is to get as high of a score as possible.</div> 
+            <div className={styles.rules}>You will have 5 seconds to guess which answer results in the highest number</div>
+            <div className={styles.rules}>At the end of 10 rounds you will see your score vs the maximum possible score you could have gotten</div>
+            <div className={styles.rules}>Good luck!</div>
           </div>
-          <div className={styles.roundContainer}>
-            <div className={styles.topbarTitle}>Round</div>
-            <div className={styles.topbarInfo}>5/10</div>
-          </div>
-          <div className={styles.scoreContainer}>
-            <div className={styles.topbarTitle}>Score</div>
-            <div className={styles.topbarInfo}>448/482</div>
+          <div className={styles.startContainer}>
+            <button className={styles.startbtn}>Start</button>
           </div>
         </div>
-        <div>
+      }
+      
+      {(!{scoreScreen}.scoreScreen && !{startScreen}.startScreen) &&
+        <div className={styles.gameBoard}>
+          <div className={styles.topbar}>
+            <div className={styles.timeContainer}>
+              <div className={styles.topbarTitle}>Time</div>
+              <div className={styles.topbarInfo}>0:08</div>
+            </div>
+            <div className={styles.roundContainer}>
+              <div className={styles.topbarTitle}>Round</div>
+              <div className={styles.topbarInfo}>5/10</div>
+            </div>
+            <div className={styles.scoreContainer}>
+              <div className={styles.topbarTitle}>Score</div>
+              <div className={styles.topbarInfo}>448/482</div>
+            </div>
+          </div>
+
           <div className={styles.questionsContainer}>
             <div className={styles.question}>5+6</div>
             <div className={styles.question}>6*3</div>
@@ -81,12 +89,15 @@ export default function Home() {
             <div className={styles.question}>12+40</div>
             <div className={styles.question}>100/3</div>
           </div>
-          <div></div>
-        </div>
       </div>
-      <div className={styles.scoreScreen}>
+      }
 
+      {{scoreScreen}.scoreScreen &&
+      <div className={styles.scoreScreen}>
+        <h1>Final Score: 448</h1>
+        <h2>Maximum possible score: 482</h2>
       </div>
+      }
     </main>
   )
 }

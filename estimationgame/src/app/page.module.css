@@ -75,15 +75,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 20px;
 }
 .rules {
   text-align: center;
   height: 80px;
   width: 100%;
   border-bottom: 1px solid green;
-  font-size: 1.0rem;
+  border-top: 1px solid green;
+  font-size: 1.5rem;
 }
-.startBtn {
-  left: 50%;
+.startContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.startbtn {
+  height: 100%;
+  font-size: 2rem;
+  background-color: rgb(216, 204, 204);
 }
